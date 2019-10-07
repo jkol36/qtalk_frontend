@@ -1,11 +1,8 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import request from 'superagent-bluebird-promise';
-import Dropdown from './components/dropdown';
-import Modal from './components/modal';
-import Button from '@material-ui/core/Button';
-import Input from '@material-ui/core/Input';
 
 
 class App extends React.Component {
@@ -52,35 +49,203 @@ class App extends React.Component {
   }
 
   render() {
-    console.log(this.state.translations)
     return (
       <React.Fragment>
-        <div id="wrapper" className="espanol-page inner-page">
+        <div id="wrapper" class="espanol-page inner-page">
         <div id="sidebar">
-            <a href="#" className="logo">Qtalk Blocks</a>
-            <div className="overflow-area">
-                <div className="library">
-                    <Dropdown color='default' title={'Library'}> 
-                      <Modal open={this.state.showModal} onClick={() => this.setState({showModal:!this.state.showModal})} title='Add to Library'> 
-                        <Input value={this.state.sourceLangVal} placeholder='hello world' fullWidth onChange={(e) => this.setState({sourceLangVal: e.target.value})}> </Input>
-                      </Modal>
-                    </Dropdown>
+            <a href="#" class="logo">Qtalk Blocks</a>
+            <div class="overflow-area">
+                <div class="library">
+                    <a id="library" href="#"><i class="fa fa-picture-o" aria-hidden="true"></i> Library</a>
+                    <div id="library-area">
+                        <div class="has-dropdown">
+                            <a href="#" class="item">Adjectives</a>
+                            <div class="items-menu" style={{display:'none'}}>
+                                <div class="icon">
+                                    <img src="images/original.png" />
+                                </div>
+                                <div class="icon">
+                                    <img src="images/original.png" />
+                                </div>
+                                <div class="icon">
+                                    <img src="images/original.png" />
+                                </div>
+                                <div class="icon">
+                                    <img src="images/original.png" />
+                                </div>
+                                <div class="icon">
+                                    <img src="images/original.png" />
+                                </div>
+                                <div class="icon">
+                                    <img src="images/original.png" />
+                                </div>
+                                <div class="icon">
+                                    <img src="images/original.png" />
+                                </div>
+                                <div class="icon">
+                                    <img src="images/original.png" />
+                                </div>
+                                <div class="icon">
+                                    <img src="images/original.png" />
+                                </div>
+                                <div class="icon">
+                                    <img src="images/original.png" />
+                                </div>
+                                <div class="icon">
+                                    <img src="images/original.png" />
+                                </div>
+                                <div class="icon">
+                                    <img src="images/original.png" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="has-dropdown">
+                            <a href="#" class="item">Adverbs</a>
+                            <div class="items-menu" style={{display:'none'}}>
+                                <div class="icon">
+                                    <img src="images/2.png" />
+                                </div>
+                                <div class="icon">
+                                    <img src="images/2.png" />
+                                </div>
+                                <div class="icon">
+                                    <img src="images/2.png" />
+                                </div>
+                                <div class="icon">
+                                    <img src="images/2.png" />
+                                </div>
+                                <div class="icon">
+                                    <img src="images/2.png" />
+                                </div>
+                                <div class="icon">
+                                    <img src="images/2.png" />
+                                </div>
+                                <div class="icon">
+                                    <img src="images/2.png" />
+                                </div>
+                                <div class="icon">
+                                    <img src="images/2.png" />
+                                </div>
+                                <div class="icon">
+                                    <img src="images/2.png" />
+                                </div>
+                                <div class="icon">
+                                    <img src="images/2.png" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div className="library lessons">
-                  <Dropdown color='default' title='Lessons'>
-                  </Dropdown>
+                <div class="library lessons">
+                    <a id="lessons" href="#"><i class="fa fa-picture-o" aria-hidden="true"></i> Lessons</a>
+                    <div id="lessons-area">
+                        <div class="has-dropdown">
+                            <a href="#" class="item">My Lessons</a>
+                            <div class="items-menu" style={{display:'none'}}>
+                                <ul>
+                                    <li>
+                                        <a href="#" class="nobtn">
+                                            <i class="fa fa-file"></i> Gender
+                                        </a>
+                                        <div class="dropdown show">
+                                            <a class=" dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            </a>
+                                            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                                    <a class="dropdown-item rename" href="#"><i class="fa fa-pencil"></i>Rename</a>
+                                                    <a class="dropdown-item delete" href="#"><i class="fa fa-trash-o"></i>Delete</a>
+
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="nobtn">
+                                            <i class="fa fa-file"></i> PARA
+                                        </a>
+                                        <div class="dropdown show">
+                                            <a class=" dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            </a>
+                                            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                                    <a class="dropdown-item rename" href="#"><i class="fa fa-pencil"></i>Rename</a>
+                                                    <a class="dropdown-item delete" href="#"><i class="fa fa-trash-o"></i>Delete</a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+
+                            </div>
+                        </div>
+                        <div class="has-dropdown">
+                            <a href="#" class="item">Qtalk Lessons</a>
+                            <div class="items-menu" style={{display:'none'}}>
+                                <ul>
+                                    <li>
+                                        <a href="#" class="nobtn">
+                                            <i class="fa fa-file"></i> Gender
+                                        </a>
+                                        <div class="dropdown show">
+                                            <a class=" dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            </a>
+                                            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                                    <a class="dropdown-item rename" href="#"><i class="fa fa-pencil"></i>Rename</a>
+                                                    <a class="dropdown-item delete" href="#"><i class="fa fa-trash-o"></i>Delete</a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="nobtn">
+                                            <i class="fa fa-file"></i> PARA
+                                        </a>
+                                        <div class="dropdown show">
+                                            <a class=" dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            </a>
+                                            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                                <a class="dropdown-item rename" href="#"><i class="fa fa-pencil"></i>Rename</a>
+                                                <a class="dropdown-item delete" href="#"><i class="fa fa-trash-o"></i>Delete</a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="user-dropdown">
+                <div class="btn-group dropup">
+                    <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        Jon Kolman
+                    </button>
+                    <div class="dropdown-menu">
+                        <h6 class="dropdown-header">Languages</h6>
+                        <a class="dropdown-item" href="#">Espanol</a>
+                        <a class="dropdown-item" href="#">Francis</a>
+                        <a class="dropdown-item" href="#">汉语</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Documentation</a>
+                        <a class="dropdown-item" href="#">Refresh Languages</a>
+                        <a class="dropdown-item" href="#">Users</a>
+                        <a class="dropdown-item" href="#">Documentation</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Account</a>
+                        <a class="dropdown-item" href="#">Logout</a>
+                    </div>
                 </div>
             </div>
         </div>
         <div id="page-content">
-            <div className="page-header">
-                <div className="d-flex justify-content-between">
-                    <h1 className="page-title espanol">Espanol</h1>
-                    <a href="#" className="toggle-options"><i className="fa fa-bars"></i></a>
-                    <div className="options">
-                        <div className="form-group">
+            <div class="page-header">
+                <div class="d-flex justify-content-between">
+                    <h1 class="page-title espanol">Espanol</h1>
+                    <a href="#" class="toggle-options"><i class="fa fa-bars"></i></a>
+                    <div class="options">
+                        <div class="form-group">
                             <label>Detect Tense</label>
-                            <select className="custom-select">
+                            <select class="custom-select">
                                 <option value="present">Present</option>
                                 <option value="preterit">Preterit</option>
                                 <option value="imperfect">Imperfect</option>
@@ -94,15 +259,15 @@ class App extends React.Component {
                                 <option value="subjunctive_future">Subjunctive Future</option>
                             </select>
                         </div>
-                        <div className="form-group">
+                        <div class="form-group">
                             <label>Gender</label>
-                            <div className="checkbox">
+                            <div class="checkbox">
                                 <input type="checkbox" data-toggle="toggle" data-size="normal"/>
                             </div>
                         </div>
-                        <div className="form-group">
+                        <div class="form-group">
                             <label>Text</label>
-                            <div className="checkbox">
+                            <div class="checkbox">
                                 <input type="checkbox" data-toggle="toggle" data-size="normal"/>
                             </div>
                         </div>
@@ -110,17 +275,90 @@ class App extends React.Component {
                 </div>
             </div>
             
-            <div className="page-content">
-                <div className="play-area currently-playing">
-                    <div className="icon-play">
-                        <a href="#"><i className="fa fa-play"></i></a>
+            <div class="page-content">
+                <div class="play-area currently-playing">
+                    <div class="icon-play">
+                        <a href="#"><i class="fa fa-play"></i></a>
                     </div>
-                    <div className="droppable-area">
+                    <div class="droppable-area">
+
+                        <div class="drop-icon selected">
+                            <img src="images/original.png" />
+                            <div class="text-on">Dummy Text</div>
+                            <span class="geneder-dot-male"></span>
+                        </div>
+                        <div class="drop-icon">
+                            <img src="images/2.png" />
+                            <div class="text-on">Dummy Text</div>
+                            <span class="geneder-dot-female"></span>
+                        </div>
+                        <div class="drop-icon">
+                            <img src="images/original.png" />
+
+                        </div>
+                        <div class="drop-icon">
+                            <img src="images/2.png" />
+                        </div>
+                        <div class="drop-icon">
+                            <img src="images/original.png" />
+                        </div>
+                        <div class="drop-icon">
+                            <img src="images/2.png" />
+                        </div>
+                        <div class="drop-icon">
+                            <img src="images/original.png" />
+                        </div>
+                        <div class="drop-icon">
+                            <img src="images/2.png" />
+                        </div>
+                        <div class="drop-icon">
+                            <img src="images/original.png" />
+                        </div>
+                        <div class="drop-icon">
+                            <img src="images/2.png" />
+                        </div>
+                        <div class="drop-icon">
+                            <img src="images/2.png" />
+                        </div>
+                        <div class="drop-icon">
+                            <img src="images/2.png" />
+                        </div>
+                        <div class="drop-icon">
+                            <img src="images/2.png" />
+                        </div>
 
                     </div>
                 </div>
-                <div className="text-center m-top m-bottom">
-                    <a href="#" className="btn-border">Add a Sentence</a>
+                <div class="play-area">
+                    <div class="icon-play">
+                        <a href="#"><i class="fa fa-play"></i></a>
+                    </div>
+                    <div class="droppable-area">
+                    </div>
+                </div>
+                <div class="play-area">
+                    <div class="icon-play">
+                        <a href="#"><i class="fa fa-play"></i></a>
+                    </div>
+                    <div class="droppable-area">
+                    </div>
+                </div>
+                <div class="play-area">
+                    <div class="icon-play">
+                        <a href="#"><i class="fa fa-play"></i></a>
+                    </div>
+                    <div class="droppable-area">
+                    </div>
+                </div>
+                <div class="play-area">
+                    <div class="icon-play">
+                        <a href="#"><i class="fa fa-play"></i></a>
+                    </div>
+                    <div class="droppable-area">
+                    </div>
+                </div>
+                <div class="text-center m-top m-bottom">
+                    <a href="#" class="btn-border">Add a Sentence</a>
                 </div>
             </div>
         </div>
