@@ -62,7 +62,7 @@ class App extends React.Component {
                 <div className="library">
                     <Dropdown color='default' title={'Library'}> 
                       <Modal open={this.state.showModal} onClick={() => this.setState({showModal:!this.state.showModal})} title='Add to Library'> 
-                        <Input fullWidth onChange={(e) => this.setState({sourceLangVal: e.target.value})}> </Input>
+                        <Input value={this.state.sourceLangVal} placeholder='hello world' fullWidth onChange={(e) => this.setState({sourceLangVal: e.target.value})}> </Input>
                       </Modal>
                     </Dropdown>
                 </div>
@@ -117,34 +117,6 @@ class App extends React.Component {
                     </div>
                     <div className="droppable-area">
 
-                    </div>
-                </div>
-                <div className="play-area">
-                    <div className="icon-play">
-                        <a href="#"><i className="fa fa-play"></i></a>
-                    </div>
-                    <div className="droppable-area">
-                    </div>
-                </div>
-                <div className="play-area">
-                    <div className="icon-play">
-                        <a href="#"><i className="fa fa-play"></i></a>
-                    </div>
-                    <div className="droppable-area">
-                    </div>
-                </div>
-                <div className="play-area">
-                    <div className="icon-play">
-                        <a href="#"><i className="fa fa-play"></i></a>
-                    </div>
-                    <div className="droppable-area">
-                    </div>
-                </div>
-                <div className="play-area">
-                    <div className="icon-play">
-                        <a href="#"><i className="fa fa-play"></i></a>
-                    </div>
-                    <div className="droppable-area">
                     </div>
                 </div>
                 <div className="text-center m-top m-bottom">
