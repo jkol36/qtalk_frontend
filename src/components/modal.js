@@ -54,7 +54,7 @@ export default function SimpleModal(props) {
         onClose={handleClose}
       >
         <div style={modalStyle} className={classes.paper}>
-
+          {props.children}
         </div>
       </Modal>
     </div>

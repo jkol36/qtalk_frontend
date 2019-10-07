@@ -68,32 +68,7 @@ class App extends React.Component {
                 </div>
                 <div className="library lessons">
                   <Dropdown color='default' title='Lessons'>
-                    <h1> Hello World</h1>
-                    <h1> Hello World</h1>
-                    <h1> Hello World</h1>
                   </Dropdown>
-                </div>
-            </div>
-            <div className="user-dropdown">
-                <div className="btn-group dropup">
-                    <button type="button" className="btn btn-secondary dropdown-toggle" data-toggle="dropdown"
-                        aria-haspopup="true" aria-expanded="false">
-                        Jon Kolman
-                    </button>
-                    <div className="dropdown-menu">
-                        <h6 className="dropdown-header">Languages</h6>
-                        <a className="dropdown-item" href="#">Espanol</a>
-                        <a className="dropdown-item" href="#">Francis</a>
-                        <a className="dropdown-item" href="#">汉语</a>
-                        <div className="dropdown-divider"></div>
-                        <a className="dropdown-item" href="#">Documentation</a>
-                        <a className="dropdown-item" href="#">Refresh Languages</a>
-                        <a className="dropdown-item" href="#">Users</a>
-                        <a className="dropdown-item" href="#">Documentation</a>
-                        <div className="dropdown-divider"></div>
-                        <a className="dropdown-item" href="#">Account</a>
-                        <a className="dropdown-item" href="#">Logout</a>
-                    </div>
                 </div>
             </div>
         </div>
